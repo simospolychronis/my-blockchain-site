@@ -1,65 +1,51 @@
-<!DOCTYPE html>
-<html lang="el">
-<head>
-  <meta charset="UTF-8">
-  <title>Η Blockchain Σελίδα μου</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #e0eafc, #cfdef3);
-      text-align: center;
-      padding-top: 100px;
-      color: #333;
-    }
+# 🧠 Ιστοσελίδα Συλλογικής Νοημοσύνης Web3
 
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 30px;
-    }
+Μια αποκεντρωμένη πλατφόρμα βασισμένη σε Web3, που συνδυάζει:
 
-    button {
-      padding: 15px 30px;
-      font-size: 1em;
-      background-color: #4caf50;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
+- 🤖 Τεχνητή Νοημοσύνη (AI)
+- 🗳️ Δημοκρατική συμμετοχή
+- 📈 Συλλογικά στατιστικά & δημοσκοπήσεις
+- 📰 Ενημέρωση με ειδήσεις που προτείνει και αξιολογεί η κοινότητα
+- 🌐 Blockchain για διαφάνεια & ασφάλεια
 
-    button:hover {
-      background-color: #45a049;
-    }
+---
 
-    #wallet {
-      margin-top: 20px;
-      font-size: 1.1em;
-    }
+## 🎯 Κύριοι στόχοι
 
-    footer {
-      margin-top: 100px;
-      font-size: 0.9em;
-      color: #666;
-    }
-  </style>
-</head>
-<body>
+- 📊 Συλλογή και προβολή στατιστικών απόψεων των πολιτών
+- 🗳️ Ψηφιακές δημοσκοπήσεις & δημοψηφίσματα
+- 🤖 Διάλογος με AI για εξήγηση θεμάτων, νομοσχεδίων, αποφάσεων
+- 🔗 Όλες οι ενέργειες να καταγράφονται με διαφάνεια στο blockchain
+- 🧠 Ενεργοποίηση της **συλλογικής νοημοσύνης** για αποφάσεις και ανάλυση
 
-  <h1>🔗 Καλωσήρθες στην Blockchain Σελίδα μου</h1>
+---
 
-  <button onclick="syndesiWallet()">Σύνδεση με Πορτοφόλι</button>
-  <p id="wallet">Δεν έχει γίνει σύνδεση ακόμα.</p>
+## ⚙️ Τεχνολογίες
 
-  <footer>
-    Δημιουργήθηκε από τον Σίμο με 💚 Web3
-  </footer>
+- React ή HTML/CSS
+- MetaMask / Web3.js / Ethers.js
+- OpenAI API
+- IPFS ή Ethereum για αποθήκευση
+- GitHub Pages για hosting
 
-  <script>
-    async function syndesiWallet() {
-      if (typeof window.ethereum !== 'undefined') {
-        try {
-          const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-          document.getElementById('wallet').innerText = 'Συνδέθηκες με: ' + accounts[0];
-        } catch (err) {
-          document.getElementById('wallet').innerText =
+---
+
+## 🔮 Σχέδια για το μέλλον
+
+- ✅ Dashboard με live στατιστικά
+- ✅ Μηχανισμός δημοψηφίσματος (με ψήφους μέσω wallet)
+- ✅ Αξιολόγηση ειδήσεων από χρήστες (fact-checking με AI)
+- ✅ NFT συμμετοχής ή token rewards
+- ✅ Ανώνυμη συμμετοχή με επαλήθευση πορτοφολιού
+
+---
+
+## 📸 Διάγραμμα Συστήματος
+
+![Διάγραμμα Web3](./diagram.png)
+
+---
+
+## ✍️ Δημιουργός
+
+Φτιαγμένο από τον [Σίμο Πολυχρόνη](https://github.com/simospolychronis) με στόχο μια πιο συμμετοχική και διαφανή κοινωνία 💚
