@@ -1,32 +1,65 @@
-# 🧠 IdeaChain DApp
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>Η Blockchain Σελίδα μου</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
+      text-align: center;
+      padding-top: 100px;
+      color: #333;
+    }
 
-Αυτό είναι ένα απλό decentralized application (DApp) που επιτρέπει στους χρήστες να προσθέτουν προτάσεις/ιδέες σε ένα έξυπνο συμβόλαιο στο blockchain.
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+    }
 
-## 🚀 Τεχνολογίες
+    button {
+      padding: 15px 30px;
+      font-size: 1em;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
 
-- HTML, CSS, JavaScript
-- [Web3.js](https://web3js.readthedocs.io/)
-- [Solidity](https://soliditylang.org/)
-- MetaMask
-- Remix IDE (για το smart contract)
-- GitHub Pages (για hosting)
+    button:hover {
+      background-color: #45a049;
+    }
 
-## 📦 Περιγραφή
+    #wallet {
+      margin-top: 20px;
+      font-size: 1.1em;
+    }
 
-- Ο χρήστης συνδέει το MetaMask wallet του
-- Μπορεί να προσθέσει μια ιδέα, η οποία αποθηκεύεται **on-chain**
-- Οι ιδέες εμφανίζονται σε λίστα, με ποιος τις έστειλε και πότε
+    footer {
+      margin-top: 100px;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
 
-## 🔗 Smart Contract
+  <h1>🔗 Καλωσήρθες στην Blockchain Σελίδα μου</h1>
 
-Το smart contract γράφτηκε σε Solidity και κάνει deploy σε testnet (π.χ. Sepolia).  
-Μπορείς να το βρεις στο αρχείο `contract.sol`.
+  <button onclick="syndesiWallet()">Σύνδεση με Πορτοφόλι</button>
+  <p id="wallet">Δεν έχει γίνει σύνδεση ακόμα.</p>
 
-## 📄 Άδεια / Credits
+  <footer>
+    Δημιουργήθηκε από τον Σίμο με 💚 Web3
+  </footer>
 
-Template βασισμένο στο **Editorial** από [HTML5 UP](https://html5up.net/editorial).  
-Επιτρέπεται η χρήση υπό την άδεια [Creative Commons Attribution 3.0](https://html5up.net/license)
-
----
-
-✍️ Δημιουργήθηκε με αγάπη και Web3 από τον Simos 💻
+  <script>
+    async function syndesiWallet() {
+      if (typeof window.ethereum !== 'undefined') {
+        try {
+          const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+          document.getElementById('wallet').innerText = 'Συνδέθηκες με: ' + accounts[0];
+        } catch (err) {
+          document.getElementById('wallet').innerText =
